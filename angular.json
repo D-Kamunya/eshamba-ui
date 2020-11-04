@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "eshamba-ui"
+    }
+  },
+  "defaultProject": "eshamba-ui",
+  "cli": {
+    "analytics": false
+  }
 }
