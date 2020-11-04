@@ -8,6 +8,7 @@ import { ProductComponent } from './components/product/product.component';
 import { HomeComponent } from './components/home/home.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
 import { ForumComponent } from './components/forum/forum.component';
+import { ManageCropsComponent } from './components/manage-crops/manage-crops.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ForumComponent } from './components/forum/forum.component';
     ProductComponent,
     HomeComponent,
     ScheduleComponent,
-    ForumComponent
+    ForumComponent,
+    ManageCropsComponent
   ],
   imports: [
     BrowserModule,
