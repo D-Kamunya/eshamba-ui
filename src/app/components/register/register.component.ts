@@ -21,6 +21,7 @@ export class RegisterComponent implements OnInit {
       password1: ''
       
     }
+    this._userService.errors=[]
   }
   registerUser() {
   	console.log(this.user)

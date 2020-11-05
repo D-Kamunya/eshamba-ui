@@ -8,18 +8,18 @@
 	    </div>
   	</div>
     <div class="row">
-        <div class="col-md-7 mt-2 mx-auto">
+        <div *ngFor='let post of _forumService.posts,let i=index' class="col-md-7 mt-2 mx-auto">
             <div class="card">
                 <div class="table table-info">
                     <h5 class="category-social">
-								<i class="fa fa-twitter"></i> Twitter
+								<i class="fas fa-blog"></i> {{post.name}}
 							</h5>
                     <h4 class="card-caption">
-								<a href="#">"Vivamus odio ante, feugiat eget nisi sit amet, dignissim velit. Sus pendisse ultricies varius."</a>
+								<a href="#">{{post.details}}</a>
 							</h4>
                     <div class="ftr">
                         <div class="author">
-                            <a href="#"> <img src="http://adamthemes.com/demo/code/cards/images/avatar3.png" alt="" class="avatar img-raised"> <span>Debbon Amet</span> </a>
+                            <a href="#"> <img src="http://adamthemes.com/demo/code/cards/images/avatar3.png" alt="" class="avatar img-raised"> <span>{{post.user.username}}</span> </a>
                         </div>
                         <div class="stats"> <i class="fa fa-heart"></i> 365 &nbsp; <i class="fa fa-share-alt"></i> 120 </div>
                     </div>
