@@ -39,7 +39,7 @@ export class UserService {
       data => {
         this.updateData(data['access'],);
         this.refresh=data['refresh']
-       
+        
       },
       err => {
         this.errors =[err.error.detail]
@@ -87,6 +87,21 @@ export class UserService {
     const token_decoded = JSON.parse(window.atob(token_parts[1]));
     this.token_expires = new Date(token_decoded.exp * 1000);
     this.user_id = token_decoded.user_id;
+
+
+    this.http.get(`${environment.api_url}/account/api/user/${token_decoded.user_id}`, this.httpOptions).subscribe(
+      data => {
+        console.log(data)
+       
+      },
+      err => {
+        console.log(err)
+          }
+    );
+
+
+
+
   }
  
 }

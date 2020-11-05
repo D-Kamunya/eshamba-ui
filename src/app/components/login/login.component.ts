@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
       username: '',
       password: ''
     }
+    this._userService.errors=[]
   	}
 
 
