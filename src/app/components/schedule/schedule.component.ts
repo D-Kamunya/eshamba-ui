@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScheduleComponent implements OnInit {
 
+
+	public schedule:any
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(){
+  	this.schedule={
+  		crop:'',
+  		name:'',
+  		details:'',
+  		date:'',
+  	}
+
+  }
+  createSchedule(){
+  	console.log(this.schedule)
   }
 
 }

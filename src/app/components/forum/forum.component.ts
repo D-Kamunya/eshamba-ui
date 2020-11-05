@@ -20,7 +20,7 @@ export class ForumComponent implements OnInit {
   	this.post={
   		name:'',
   		details:'',
-  		user:JSON.stringify(localStorage.current_user)
+  		user:localStorage.current_userid
   	}
   }
 

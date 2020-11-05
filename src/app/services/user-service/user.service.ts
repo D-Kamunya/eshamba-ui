@@ -39,6 +39,7 @@ export class UserService {
       data => {
         this.updateData(data['access'],);
         this.refresh=data['refresh']
+        this.router.navigate(['/forum'])
         
       },
       err => {
@@ -76,6 +77,7 @@ export class UserService {
     this.token = null;
     this.token_expires = null;
     this.user_id = null;
+    this.router.navigate(['/login'])
   }
  
   private updateData(token) {
