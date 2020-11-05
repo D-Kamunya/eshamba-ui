@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ProductService} from '../../services/product-service/product.service'
+import {ScheduleService} from '../../services/schedule-service/schedule.service';
 
 @Component({
   selector: 'app-product',
@@ -7,9 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+	public recommendation: any;
+	public product: any;
 
-  ngOnInit(): void {
+  constructor(public _productService: ProductService,public _scheduleService: ScheduleService) { }
+
+  ngOnInit() {
+  	this._productService.getProducts()
+  	this.recommendation={
+  		user:localStorage.current_userid,
+  		product:localStorage.recprd,
+  		rec_crops:''
+  	}
+  	this.product={
+  		product:localStorage.recprd,
+  		crop:''
+  	}
+  	this._scheduleService.userCrops()
   }
 
+  recProduct(){
+  	this._productService.recProduct(this.recommendation)
+  }
+  setPrdId(id){
+  	localStorage.recprd=id
+  }
+  saveProduct(){
+  	this._productService.saveProduct(this.product)
+  }
 }

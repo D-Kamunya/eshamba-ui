@@ -1,0 +1,56 @@
+<div class="auth">
+<section id="content">
+<p *ngFor='let e of _userService.errors'>Registration unsuccessful</p>
+  <form #regForm='ngForm'>
+    <h2 class="text-center">Eshamba</h2>
+    
+    <div class="form-group"><input type="text" [(ngModel)]="user.username" name="username" class="form-control" placeholder="Username" #username='ngModel' autofocus="" title="" required id="username">
+   <span *ngFor="let error of _userService.errors">
+    {{ error.username }}</span> 	
+	<div [hidden]="username.valid || username.pristine" class="alert alert-danger">
+       <p>Username is required</p>
+    </div>
+    
+
+    </div>
+    <div class="form-group"><input type="text" [(ngModel)]="user.first_name" name="first_name" class="form-control" placeholder="First Name" #first_name='ngModel' title="" required id="first_name">
+	<div [hidden]="first_name.valid || first_name.pristine" class="alert alert-danger">
+       <p>First name is required</p>
+    </div>
+
+
+    </div>
+    <div class="form-group"><input type="text" [(ngModel)]="user.last_name" name="last_name" class="form-control" placeholder="Last Name" #last_name='ngModel'  title="" required id="last_name">
+	<div [hidden]="last_name.valid || last_name.pristine" class="alert alert-danger">
+       <p>Last name is required</p>
+    </div>
+
+
+    </div>
+    <div class="form-group"><input type="text" [(ngModel)]="user.email" name="email" class="form-control" placeholder="Email" title="" #email='ngModel'  required id="email">
+	<div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+       <p>Email is required</p>
+    </div>
+
+
+    </div>
+    <div class="form-group"><input type="password" [(ngModel)]="user.password1" name="password1" class="form-control" placeholder="Password" #password1='ngModel'  title="" required id="password1">
+    <span *ngFor="let error of _userService.errors">
+    {{ error.password }}</span>
+	<div [hidden]="password1.valid || password1.pristine" class="alert alert-danger">
+       <p>Password is required</p>
+    </div>
+	
+
+    </div>
+   
+    <div class="form-group text-center">
+      <button (click)='registerUser()' class="btn aqua-gradient-rgba" type="button">Sign up</button>
+    </div>
+    
+  </form>
+</section>
+<div id = "no_account">
+    <h4>Have an account?<a routerLink="/login" routerLinkActive="active" > Log in</a></h4>
+</div>
+</div>

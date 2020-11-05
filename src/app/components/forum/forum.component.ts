@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {ForumService} from '../../services/forum-service/forum.service'
 @Component({
   selector: 'app-forum',
   templateUrl: './forum.component.html',
@@ -7,9 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForumComponent implements OnInit {
 
-  constructor() { }
+
+
+  public post:any;
+
+  constructor(public _forumService: ForumService) { 
+
+  }
 
   ngOnInit(): void {
+  	this._forumService.getPosts()
+  	this.post={
+  		name:'',
+  		details:'',
+  		user:localStorage.current_userid
+  	}
+  }
+
+
+  addPost(){
+  	this._forumService.createPost(this.post)
   }
 
 }
