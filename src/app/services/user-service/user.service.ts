@@ -36,13 +36,14 @@ export class UserService {
   public login(user) {
     this.http.post(`${environment.api_url}/api/token/`, JSON.stringify(user), this.httpOptions).subscribe(
       data => {
-        this.updateData(data['access']);
+        this.updateData(data['access'],);
         this.refresh_token=data['refresh']
         console.log(data)
+        console.log(this.refresh_token)
       },
       err => {
-        this.errors = err['error'];
-      }
+        this.errors =[err.error.detail]
+          }
     );
   }
  
@@ -53,7 +54,7 @@ export class UserService {
         this.updateData(data['token']);
       },
       err => {
-        this.errors = err['error'];
+        this.errors = [err.error.detail]
       }
     );
   }
