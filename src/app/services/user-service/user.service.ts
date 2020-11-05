@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-
+import {environment} from '../../../environments/environment'
 @Injectable({
   providedIn: 'root'
 })
@@ -19,12 +19,14 @@ export class UserService {
   public token_expires: Date;
  
   // the username of the logged in user
-  public user_id: int;
+  public user_id: number;
  
   // error messages received from the login attempt
   public errors: any = [];
 
-  constructor() {
+  
+
+  constructor(private http:HttpClient) {
   	this.httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     }
@@ -32,10 +34,11 @@ export class UserService {
 
   // Uses http.post() to get an auth token from drf-jwt endpoint
   public login(user) {
-    this.http.post('/api/token/', JSON.stringify(user), this.httpOptions).subscribe(
+    this.http.post(`${environment.api_url}/api/token/`, JSON.stringify(user), this.httpOptions).subscribe(
       data => {
         this.updateData(data['access']);
         this.refresh_token=data['refresh']
+        console.log(data)
       },
       err => {
         this.errors = err['error'];
@@ -45,7 +48,7 @@ export class UserService {
  
   // Refreshes the JWT token, to extend the time the user is logged in
   public refreshToken() {
-    this.http.post('/api/token/refresh/', JSON.stringify({token: this.refresh_token}), this.httpOptions).subscribe(
+    this.http.post(`${environment.api_url}/api/token/refresh/`, JSON.stringify({token: this.refresh_token}), this.httpOptions).subscribe(
       data => {
         this.updateData(data['token']);
       },
@@ -58,7 +61,7 @@ export class UserService {
   public logout() {
     this.token = null;
     this.token_expires = null;
-    this.username = null;
+    this.user_id = null;
   }
  
   private updateData(token) {
