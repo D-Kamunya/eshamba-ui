@@ -13,7 +13,7 @@ export class UserService {
   public token: string;
 
 	// the  JWT refresh token
-  public refresh_token: string;
+  public refresh: string;
  
   // the token expiration date
   public token_expires: Date;
@@ -37,9 +37,8 @@ export class UserService {
     this.http.post(`${environment.api_url}/api/token/`, JSON.stringify(user), this.httpOptions).subscribe(
       data => {
         this.updateData(data['access'],);
-        this.refresh_token=data['refresh']
-        console.log(data)
-        console.log(this.refresh_token)
+        this.refresh=data['refresh']
+       
       },
       err => {
         this.errors =[err.error.detail]
@@ -49,9 +48,9 @@ export class UserService {
  
   // Refreshes the JWT token, to extend the time the user is logged in
   public refreshToken() {
-    this.http.post(`${environment.api_url}/api/token/refresh/`, JSON.stringify({token: this.refresh_token}), this.httpOptions).subscribe(
+    this.http.post(`${environment.api_url}/api/token/refresh/`, JSON.stringify({refresh: this.refresh}), this.httpOptions).subscribe(
       data => {
-        this.updateData(data['token']);
+        this.updateData(data['access']);
       },
       err => {
         this.errors = [err.error.detail]
