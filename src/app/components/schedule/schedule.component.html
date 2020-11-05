@@ -1,7 +1,7 @@
 <div class="container" style="padding-top: 5vh;">	
 	<div class="mx-auto mb-3 col-md-6 text-center">
 	    <div style="position: relative;" class="card border-info mx-sm-1 p-3">
-	        <div class="card border-info shadow text-info p-3 my-card text-center" ><i class="fas fa-blog"></i></div>
+	        <div class="card border-info shadow text-info p-3 my-card text-center" ><i class="far fa-calendar-alt"></i></div>
 	        <div class="text-info text-center mt-3"><h4>Schedules</h4></div>
 	        <div class="text-info text-center mt-2"><h1>0</h1></div>
 	        <button style="width: 50%;" data-toggle="modal" data-target="#sFormModal" class="mx-auto btn btn-md aqua-gradient">Add Schedule</button>
@@ -37,21 +37,17 @@
         </button>
       </div>
       <div class="modal-body mx-3">
-
         <div class="md-form mb-4">
-      
-          <select [(ngModel)]="schedule.crop" #schedule_crop='ngModel' id="schedule_crop" class="browser-default custom-select">
-			  <option selected>Open this select menu</option>
-			  <option value="1">One</option>
-			  <option value="2">Two</option>
-			  <option value="3">Three</option>
+      <i class="fas fa-apple-alt prefix grey-text mr-3"></i>
+          <select [(ngModel)]="schedule.crop" #schedule_crop='ngModel' name="schedule_crop" id="schedule_crop" class="browser-default custom-select">
+			  <option *ngFor="let crop of _scheduleService.usercrops,let i=index" value="{{crop.id}}">{{crop.name}}</option>
 			</select>
  
         </div>
         <div class="md-form mb-4">
             <div class="md-form mb-4">
                 <i class="fas fa-edit prefix grey-text"></i>
-                <input [(ngModel)]="schedule.name" #schedule_name='ngModel'  type="text" id="schedule_name" class="form-control validate">
+                <input [(ngModel)]="schedule.name" #schedule_name='ngModel' name="schedule_name"  type="text" id="schedule_name" class="form-control validate">
                 <label data-error="wrong" data-success="right" for="schedule_name">Name</label>
                 <div [hidden]="schedule_name.valid || schedule_name.pristine" class="alert alert-danger">
 			       <p>Schedule name is required</p>
@@ -61,7 +57,7 @@
           <div class="md-form mb-4">
             <div class="md-form mb-4">
                 <i class="fas fa-file-alt prefix grey-text"></i>
-                <input [(ngModel)]="schedule.details" #schedule_detail='ngModel' type="text" id="schedule_detail" class="form-control validate">
+                <input [(ngModel)]="schedule.details" #schedule_detail='ngModel' name="schedule_detail" type="text" id="schedule_detail" class="form-control validate">
                 <label data-error="wrong" data-success="right" for="schedule_detail">detail</label>
                 <div [hidden]="schedule_detail.valid || schedule_detail.pristine" class="alert alert-danger">
 			       <p>Schedule details are required</p>
@@ -71,15 +67,16 @@
           <div class="md-form mb-4">
             <div class="md-form mb-4">
                 <i class="fas fa-calendar-alt prefix grey-text"></i>
-                <input [(ngModel)]="schedule.date" #schedule_date='ngModel' type="date" id="schedule_date" class="form-control validate">
+                <input [(ngModel)]="schedule.schedule_date" #schedule_date='ngModel' name="schedule_date" type="date" id="schedule_date" class="form-control validate">
                 <label data-error="wrong" data-success="right" for="defaultForm-pass">Shedule Date</label>
-                <div [hidden]="schedule.date.valid || schedule.date.pristine" class="alert alert-danger">
+                <div [hidden]="schedule_date.valid || schedule_date.pristine" class="alert alert-danger">
 			       <p>Schedule date is required</p>
 			    </div>
               </div>
           </div>
+       
       </div>
-      <div class="modal-footer d-flex justify-content-center">
+         <div class="modal-footer d-flex justify-content-center">
         <button (click)='createSchedule()' class="btn btn-default">Submit</button>
       </div>
     </div>

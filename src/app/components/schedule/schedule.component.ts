@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ScheduleService} from '../../services/schedule-service/schedule.service';
 
 @Component({
   selector: 'app-schedule',
@@ -9,19 +10,22 @@ export class ScheduleComponent implements OnInit {
 
 
 	public schedule:any
-  constructor() { }
+  constructor(public _scheduleService: ScheduleService) { }
 
   ngOnInit(){
   	this.schedule={
   		crop:'',
+  		user:localStorage.current_userid,
   		name:'',
   		details:'',
-  		date:'',
+  		schedule_date:new Date(),
   	}
+  	this._scheduleService.userCrops()
 
   }
   createSchedule(){
   	console.log(this.schedule)
+  	this._scheduleService.createSchedule(this.schedule)
   }
 
 }
