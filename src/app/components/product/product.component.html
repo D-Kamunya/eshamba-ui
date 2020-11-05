@@ -7,7 +7,7 @@
 		</div>
   	</div>
   <div class="row">
-    <div *ngFor="let product of _productService.products;let i=index" class="col-12 mx-auto col-sm-8 col-md-4 col-lg-3">
+    <div *ngFor="let product of _productService.products;let i=index" class="text-center col-12 mx-auto col-sm-8 col-md-4 col-lg-3">
       <div class="card">
         <img class="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" alt="Vans">
         <div class="card-img-overlay d-flex justify-content-end">
@@ -22,10 +22,49 @@
            {{product.crops}}</p>
           <div class="buy d-flex justify-content-between align-items-center">
             <div class="price text-success"><h5 class="mt-4">Kshs.{{product.price}}</h5></div>
-             <a href="#" class="btn btn-danger mt-3">Recommend</a>
+         
           </div>
+
         </div>
+
       </div>
+    <button (click)='setPrdId(product.id)' data-toggle="modal" data-target="#recFormModal" class="btn btn-success mt-3">Recommend</button>
     </div>
   </div>
+
+
+  <div class="modal fade" id="recFormModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Recommend Product</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+      <form #regForm='ngForm'>
+	    <div class="form-group">
+		<label>Crops</label>
+	    	<input type="text" [(ngModel)]="recommendation.rec_crops" name="rec_crops" class="form-control" placeholder="Enter crop(s) you recommend" #rec_crops='ngModel'  title="" required id="rec_crops">
+		<div [hidden]="rec_crops.valid || rec_crops.pristine" class="alert alert-danger">
+	       <p>Crop details</p>
+	    </div>
+		
+
+	    </div>
+	   
+	    <div class="form-group text-center">
+	      <button (click)='recProduct()' class="btn aqua-gradient-rgba" type="button">Recommend</button>
+	    </div>
+	    
+	  </form>
+        
+       
+      </div>
+   
+    </div>
+  </div>
+</div>	
 </div>

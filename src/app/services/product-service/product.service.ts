@@ -36,4 +36,17 @@ export class ProductService {
           }
     );
   }
+
+
+  public recProduct(rec) {
+    this.http.post(`${environment.api_url}/shamba/api/product_recommendations`, rec, this.httpOptions).subscribe(
+      data => {
+       	alert('Recommendation added')
+      },
+      err => {
+        console.log(err)
+          }
+    );
+  }
+ 
 }
