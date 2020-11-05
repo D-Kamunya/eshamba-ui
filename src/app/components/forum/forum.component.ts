@@ -20,13 +20,13 @@ export class ForumComponent implements OnInit {
   	this.post={
   		name:'',
   		details:'',
-  		user:localStorage.current_user
+  		user:JSON.stringify(localStorage.current_user)
   	}
   }
 
 
   addPost(){
-  	console.log(this.post)
+  	this._forumService.createPost(this.post)
   }
 
 }

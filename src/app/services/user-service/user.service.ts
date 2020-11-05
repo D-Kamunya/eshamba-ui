@@ -87,12 +87,12 @@ export class UserService {
     const token_decoded = JSON.parse(window.atob(token_parts[1]));
     this.token_expires = new Date(token_decoded.exp * 1000);
     this.user_id = token_decoded.user_id;
-
+    localStorage.current_userid=this.user_id
 
     this.http.get(`${environment.api_url}/account/api/user/${token_decoded.user_id}`, this.httpOptions).subscribe(
       data => {
         localStorage.current_user=data
-       
+
       },
       err => {
         console.log(err)

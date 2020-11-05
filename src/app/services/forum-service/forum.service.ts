@@ -33,6 +33,21 @@ export class ForumService {
           }
     );
   }
+
+
+
+  public createPost(post) {
+    this.http.post(`${environment.api_url}/shamba/api/post`, post, this.httpOptions).subscribe(
+      data => {
+        console.log(data)
+       
+      },
+      err => {
+      	console.log(typeof(post))
+        console.log(err)
+          }
+    );
+  }
  
 
 
