@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {environment} from '../../../environments/environment'
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
@@ -26,7 +27,7 @@ export class UserService {
 
   
 
-  constructor(private http:HttpClient) {
+  constructor(private http:HttpClient,private router:Router) {
   	this.httpOptions = {
       headers: new HttpHeaders({'Content-Type': 'application/json'})
     }
@@ -46,6 +47,19 @@ export class UserService {
     );
   }
  
+
+
+ public registerUser(user) {
+    this.http.post(`${environment.api_url}/account/api/register`, JSON.stringify(user), this.httpOptions).subscribe(
+      data => {
+        this.router.navigate(['/login'])
+       
+      },
+      err => {
+        this.errors =[err.error]
+          }
+    );
+  }
   // Refreshes the JWT token, to extend the time the user is logged in
   public refreshToken() {
     this.http.post(`${environment.api_url}/api/token/refresh/`, JSON.stringify({refresh: this.refresh}), this.httpOptions).subscribe(
