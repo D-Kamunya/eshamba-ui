@@ -7,10 +7,26 @@ import {ForumService} from '../../services/forum-service/forum.service'
 })
 export class ForumComponent implements OnInit {
 
-  constructor(public _forumService: ForumService) { }
+
+
+  public post:any;
+
+  constructor(public _forumService: ForumService) { 
+
+  }
 
   ngOnInit(): void {
   	this._forumService.getPosts()
+  	this.post={
+  		name:'',
+  		details:'',
+  		user:localStorage.current_user
+  	}
+  }
+
+
+  addPost(){
+  	console.log(this.post)
   }
 
 }

@@ -91,7 +91,7 @@ export class UserService {
 
     this.http.get(`${environment.api_url}/account/api/user/${token_decoded.user_id}`, this.httpOptions).subscribe(
       data => {
-        console.log(data)
+        localStorage.current_user=data
        
       },
       err => {
