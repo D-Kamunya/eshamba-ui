@@ -1,1 +1,59 @@
-<p>forum works!</p>
+<div class="container" style="padding-top: 5vh;">
+	 <div class="mx-auto mb-3 col-md-6 text-center">
+	    <div style="position: relative;" class="card border-info mx-sm-1 p-3">
+	        <div class="card border-info shadow text-info p-3 my-card text-center" ><i class="fas fa-blog"></i></div>
+	        <div class="text-info text-center mt-3"><h4>Forum</h4></div>
+	        <div class="text-info text-center mt-2"><h1>0</h1></div>
+	        <button style="width: 50%;" data-toggle="modal" data-target="#postFormModal" class="mx-auto btn btn-md aqua-gradient">Add Post</button>
+	    </div>
+  	</div>
+    <div class="row">
+        <div class="col-md-7 mt-2 mx-auto">
+            <div class="card">
+                <div class="table table-info">
+                    <h5 class="category-social">
+								<i class="fa fa-twitter"></i> Twitter
+							</h5>
+                    <h4 class="card-caption">
+								<a href="#">"Vivamus odio ante, feugiat eget nisi sit amet, dignissim velit. Sus pendisse ultricies varius."</a>
+							</h4>
+                    <div class="ftr">
+                        <div class="author">
+                            <a href="#"> <img src="http://adamthemes.com/demo/code/cards/images/avatar3.png" alt="" class="avatar img-raised"> <span>Debbon Amet</span> </a>
+                        </div>
+                        <div class="stats"> <i class="fa fa-heart"></i> 365 &nbsp; <i class="fa fa-share-alt"></i> 120 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="postFormModal" tabindex="-1" role="dialog" aria-labelledby="postFormLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="mx-auto modal-title text-center" id="exampleModalLabel">Create post</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form  action="" method="post" enctype="multipart/form-data">
+     
+      
+	          <div class="form-group"><label class="control-label active" for="id_post_title">Post title</label><input type="text" name="post_title" maxlength="150" class="form-control" placeholder="Post title" title="" required="" id="id_post_title"></div>
+				<div class="form-group"><label class="control-label active" for="id_post_text">Post text</label><textarea name="post_text" cols="40" rows="10" class="form-control" placeholder="Post text" title="" required="" id="id_post_text"></textarea></div>
+	          <div class="text-center">
+	            <span class="waves-input-wrapper waves-effect waves-light"><input type="submit" class=" btn aqua-gradient btn-lg" value="POST"></span>
+	          </div>
+        
+	          
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+</div>
