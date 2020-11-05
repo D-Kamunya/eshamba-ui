@@ -12,6 +12,7 @@ import { ScheduleComponent } from './components/schedule/schedule.component';
 import { ForumComponent } from './components/forum/forum.component';
 import { ManageCropsComponent } from './components/manage-crops/manage-crops.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { LoginComponent } from './components/login/login.component';
     ScheduleComponent,
     ForumComponent,
     ManageCropsComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
