@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'; 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
 import { ForumComponent } from './components/forum/forum.component';
 import { ManageCropsComponent } from './components/manage-crops/manage-crops.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { ManageCropsComponent } from './components/manage-crops/manage-crops.com
     HomeComponent,
     ScheduleComponent,
     ForumComponent,
-    ManageCropsComponent
+    ManageCropsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
