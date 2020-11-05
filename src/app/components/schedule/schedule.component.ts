@@ -21,6 +21,7 @@ export class ScheduleComponent implements OnInit {
   		schedule_date:new Date(),
   	}
   	this._scheduleService.userCrops()
+  	this._scheduleService.getSchedules()
 
   }
   createSchedule(){

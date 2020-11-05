@@ -24,6 +24,19 @@ export class ScheduleService {
     this.http.get(`${environment.api_url}/shamba/api/crops/user/${localStorage.current_userid}`, this.httpOptions).subscribe(
       data => {
         this.usercrops=data
+      },
+      err => {
+        console.log(err)
+        this.errors=true
+          }
+    );
+  }
+
+
+  public getSchedules() {
+    this.http.get(`${environment.api_url}/shamba/api/schedule/user/${localStorage.current_userid}`, this.httpOptions).subscribe(
+      data => {
+        this.schedules=data
         console.log(data)       
       },
       err => {
