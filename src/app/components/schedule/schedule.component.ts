@@ -25,8 +25,13 @@ export class ScheduleComponent implements OnInit {
 
   }
   createSchedule(){
-  	console.log(this.schedule)
+
   	this._scheduleService.createSchedule(this.schedule)
   }
 
+
+  deleteSchedule(id){
+ 
+  	this._scheduleService.deleteSchedule(id)
+  }
 }

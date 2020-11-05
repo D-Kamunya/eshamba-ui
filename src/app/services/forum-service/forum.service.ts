@@ -40,7 +40,8 @@ export class ForumService {
   public createPost(post) {
     this.http.post(`${environment.api_url}/shamba/api/post`, post, this.httpOptions).subscribe(
       data => {
-        this.router.navigate(['/forum'])
+        this.getPosts()
+       	alert('Post created successfully')
       },
       err => {
       	console.log(typeof(post))

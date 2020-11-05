@@ -58,6 +58,21 @@ export class ScheduleService {
           }
     );
   }
+
+
+  public deleteSchedule(id) {
+    this.http.delete(`${environment.api_url}/shamba/api/schedule/${id}`, this.httpOptions).subscribe(
+      data => {
+      	alert('Schedule deleted')
+      	this.getSchedules()
+      	console.log(data)
+      },
+      err => {
+    
+        console.log(err)
+          }
+    );
+  }
  
 
 }
