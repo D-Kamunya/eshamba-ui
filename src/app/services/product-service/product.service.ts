@@ -48,5 +48,17 @@ export class ProductService {
           }
     );
   }
+
+
+  public saveProduct(product) {
+    this.http.post(`${environment.api_url}/shamba/api/crop_product`, product, this.httpOptions).subscribe(
+      data => {
+       	alert('Product added to crop')
+      },
+      err => {
+        console.log(err)
+          }
+    );
+  }
  
 }
