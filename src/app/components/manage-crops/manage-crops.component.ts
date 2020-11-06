@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManageCropsComponent implements OnInit {
 
+
+	public crop:any
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+  	this.crop={
+  		user:localStorage.current_userid,
+  		name:'',
+  		photo:'',
+  		details:''
+  	}
+
+  }
+
+
+  addCrop(){
+  	console.log(this.crop)
   }
 
 }
