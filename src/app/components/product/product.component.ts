@@ -18,7 +18,7 @@ export class ProductComponent implements OnInit {
   	this._productService.getProducts()
   	this.recommendation={
   		user:localStorage.current_userid,
-  		product:localStorage.recprd,
+  		product:'',
   		rec_crops:''
   	}
   	this.product={
@@ -32,7 +32,7 @@ export class ProductComponent implements OnInit {
   	this._productService.recProduct(this.recommendation)
   }
   setPrdId(id){
-  	localStorage.recprd=id
+  	this.recommendation.product=id
   }
   saveProduct(){
   	this._productService.saveProduct(this.product)

@@ -36,4 +36,19 @@ export class CropService {
     );
   }
 
+
+
+
+	 public addActivity(activity) {
+	  this.http.post(`${environment.api_url}/shamba/api/crop_activity`, activity, this.httpOptions).subscribe(
+	    data => {
+	     	alert('Crop activity added successfully')
+	    },
+	    err => {
+	    	this.errors=true
+	      console.log(err)
+	        }
+	  );
+	}
+
 }

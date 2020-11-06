@@ -10,6 +10,7 @@ export class ManageCropsComponent implements OnInit {
 
 
 	public crop:any
+	public activity:any
   constructor(public _cropService: CropService,public _scheduleService: ScheduleService) { }
 
   ngOnInit() {
@@ -19,12 +20,22 @@ export class ManageCropsComponent implements OnInit {
   		photo:'',
   		details:''
   	}
+  	this.activity={
+  		crop:'',
+  		activity:''
+  	}
   	this._scheduleService.userCrops()
   }
 
 
   addCrop(){
   	this._cropService.addCrop(this.crop)
+  }
+  setCrpId(id){
+  	this.activity.crop=id
+  }
+  addActivity(){
+  	this._cropService.addActivity(this.activity)
   }
 
 }
