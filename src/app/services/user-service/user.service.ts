@@ -53,6 +53,7 @@ export class UserService {
  public registerUser(user) {
     this.http.post(`${environment.api_url}/account/api/register`, JSON.stringify(user), this.httpOptions).subscribe(
       data => {
+        alert('User registered successfully')
         this.router.navigate(['/login'])
        
       },
