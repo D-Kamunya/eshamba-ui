@@ -39,7 +39,7 @@ export class UserService {
       data => {
         this.updateData(data['access'],);
         this.refresh=data['refresh']
-        this.router.navigate(['/forum'])
+        this.router.navigate(['/products'])
         
       },
       err => {
