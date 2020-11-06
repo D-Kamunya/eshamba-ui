@@ -62425,14 +62425,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/__ivy_ngcc__/fesm2015/router.js");
-/* harmony import */ var _components_home_home_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/home/home.component */ "./src/app/components/home/home.component.ts");
-/* harmony import */ var _components_product_product_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/product/product.component */ "./src/app/components/product/product.component.ts");
-/* harmony import */ var _components_forum_forum_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/forum/forum.component */ "./src/app/components/forum/forum.component.ts");
-/* harmony import */ var _components_manage_crops_manage_crops_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/manage-crops/manage-crops.component */ "./src/app/components/manage-crops/manage-crops.component.ts");
-/* harmony import */ var _components_schedule_schedule_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/schedule/schedule.component */ "./src/app/components/schedule/schedule.component.ts");
-/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
-/* harmony import */ var _components_register_register_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/register/register.component */ "./src/app/components/register/register.component.ts");
-
+/* harmony import */ var _components_product_product_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/product/product.component */ "./src/app/components/product/product.component.ts");
+/* harmony import */ var _components_forum_forum_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/forum/forum.component */ "./src/app/components/forum/forum.component.ts");
+/* harmony import */ var _components_manage_crops_manage_crops_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/manage-crops/manage-crops.component */ "./src/app/components/manage-crops/manage-crops.component.ts");
+/* harmony import */ var _components_schedule_schedule_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/schedule/schedule.component */ "./src/app/components/schedule/schedule.component.ts");
+/* harmony import */ var _components_login_login_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/login/login.component */ "./src/app/components/login/login.component.ts");
+/* harmony import */ var _components_register_register_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/register/register.component */ "./src/app/components/register/register.component.ts");
 
 
 
@@ -62444,13 +62442,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '', component: _components_home_home_component__WEBPACK_IMPORTED_MODULE_2__["HomeComponent"] },
-    { path: 'login', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_7__["LoginComponent"] },
-    { path: 'register', component: _components_register_register_component__WEBPACK_IMPORTED_MODULE_8__["RegisterComponent"] },
-    { path: 'products', component: _components_product_product_component__WEBPACK_IMPORTED_MODULE_3__["ProductComponent"] },
-    { path: 'schedules', component: _components_schedule_schedule_component__WEBPACK_IMPORTED_MODULE_6__["ScheduleComponent"] },
-    { path: 'forum', component: _components_forum_forum_component__WEBPACK_IMPORTED_MODULE_4__["ForumComponent"] },
-    { path: 'manage-crops', component: _components_manage_crops_manage_crops_component__WEBPACK_IMPORTED_MODULE_5__["ManageCropsComponent"] },
+    { path: '', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_6__["LoginComponent"] },
+    { path: 'login', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_6__["LoginComponent"] },
+    { path: 'register', component: _components_register_register_component__WEBPACK_IMPORTED_MODULE_7__["RegisterComponent"] },
+    { path: 'products', component: _components_product_product_component__WEBPACK_IMPORTED_MODULE_2__["ProductComponent"] },
+    { path: 'schedules', component: _components_schedule_schedule_component__WEBPACK_IMPORTED_MODULE_5__["ScheduleComponent"] },
+    { path: 'forum', component: _components_forum_forum_component__WEBPACK_IMPORTED_MODULE_3__["ForumComponent"] },
+    { path: 'manage-crops', component: _components_manage_crops_manage_crops_component__WEBPACK_IMPORTED_MODULE_4__["ManageCropsComponent"] },
 ];
 let AppRoutingModule = /*@__PURE__*/ (() => {
     class AppRoutingModule {
@@ -62628,8 +62626,6 @@ function ForumComponent_div_14_Template(rf, ctx) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 41);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](16, "i", 42);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, " 365 \u00A0 ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](18, "i", 43);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, " 120 ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -62664,7 +62660,7 @@ let ForumComponent = /*@__PURE__*/ (() => {
         }
     }
     ForumComponent.ɵfac = function ForumComponent_Factory(t) { return new (t || ForumComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_forum_service_forum_service__WEBPACK_IMPORTED_MODULE_1__["ForumService"])); };
-    ForumComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ForumComponent, selectors: [["app-forum"]], decls: 49, vars: 6, consts: [[1, "container", 2, "padding-top", "5vh"], [1, "mx-auto", "mb-3", "col-md-6", "text-center"], [1, "card", "border-info", "mx-sm-1", "p-3", 2, "position", "relative"], [1, "card", "border-info", "shadow", "text-info", "p-3", "my-card", "text-center"], [1, "fas", "fa-blog"], [1, "text-info", "text-center", "mt-3"], [1, "text-info", "text-center", "mt-2"], ["data-toggle", "modal", "data-target", "#postFormModal", 1, "mx-auto", "btn", "btn-md", "aqua-gradient", 2, "width", "50%"], [1, "row"], ["class", "col-md-7 mt-2 mx-auto", 4, "ngFor", "ngForOf"], ["id", "postFormModal", "tabindex", "-1", "role", "dialog", "aria-labelledby", "postFormLabel", "aria-hidden", "true", 1, "modal", "fade"], ["role", "document", 1, "modal-dialog"], [1, "modal-content"], [1, "modal-header"], ["id", "exampleModalLabel", 1, "mx-auto", "modal-title", "text-center"], ["type", "button", "data-dismiss", "modal", "aria-label", "Close", 1, "close"], ["aria-hidden", "true"], [1, "modal-body"], ["action", "", "method", "post", "enctype", "multipart/form-data"], [1, "form-group"], ["for", "post_title", 1, "control-label", "active"], ["type", "text", "name", "post_title", "maxlength", "150", "placeholder", "Post title", "title", "", "required", "", "id", "post_title", 1, "form-control", 3, "ngModel", "ngModelChange"], ["post_title", "ngModel"], [1, "alert", "alert-danger", 3, "hidden"], ["for", "post_text", 1, "control-label", "active"], ["name", "post_text", "cols", "40", "rows", "10", "placeholder", "Post text", "title", "", "required", "", "id", "post_text", 1, "form-control", 3, "ngModel", "ngModelChange"], ["post_text", "ngModel"], [1, "text-center"], [1, "waves-input-wrapper", "waves-effect", "waves-light"], ["type", "button", 1, "btn", "aqua-gradient", "btn-lg", 3, "click"], [1, "modal-footer"], ["type", "button", "data-dismiss", "modal", 1, "btn", "btn-secondary"], [1, "col-md-7", "mt-2", "mx-auto"], [1, "card"], [1, "table", "table-info"], [1, "category-social"], [1, "card-caption"], ["href", "#"], [1, "ftr"], [1, "author"], ["src", "http://adamthemes.com/demo/code/cards/images/avatar3.png", "alt", "", 1, "avatar", "img-raised"], [1, "stats"], [1, "fa", "fa-heart"], [1, "fa", "fa-share-alt"]], template: function ForumComponent_Template(rf, ctx) {
+    ForumComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ForumComponent, selectors: [["app-forum"]], decls: 49, vars: 6, consts: [[1, "container", 2, "padding-top", "5vh"], [1, "mx-auto", "mb-3", "col-md-6", "text-center"], [1, "card", "border-info", "mx-sm-1", "p-3", 2, "position", "relative"], [1, "card", "border-info", "shadow", "text-info", "p-3", "my-card", "text-center"], [1, "fas", "fa-blog"], [1, "text-info", "text-center", "mt-3"], [1, "text-info", "text-center", "mt-2"], ["data-toggle", "modal", "data-target", "#postFormModal", 1, "mx-auto", "btn", "btn-md", "aqua-gradient", 2, "width", "50%"], [1, "row"], ["class", "col-md-7 mt-2 mx-auto", 4, "ngFor", "ngForOf"], ["id", "postFormModal", "tabindex", "-1", "role", "dialog", "aria-labelledby", "postFormLabel", "aria-hidden", "true", 1, "modal", "fade"], ["role", "document", 1, "modal-dialog"], [1, "modal-content"], [1, "modal-header"], ["id", "exampleModalLabel", 1, "mx-auto", "modal-title", "text-center"], ["type", "button", "data-dismiss", "modal", "aria-label", "Close", 1, "close"], ["aria-hidden", "true"], [1, "modal-body"], ["action", "", "method", "post", "enctype", "multipart/form-data"], [1, "form-group"], ["for", "post_title", 1, "control-label", "active"], ["type", "text", "name", "post_title", "maxlength", "150", "placeholder", "Post title", "title", "", "required", "", "id", "post_title", 1, "form-control", 3, "ngModel", "ngModelChange"], ["post_title", "ngModel"], [1, "alert", "alert-danger", 3, "hidden"], ["for", "post_text", 1, "control-label", "active"], ["name", "post_text", "cols", "40", "rows", "10", "placeholder", "Post text", "title", "", "required", "", "id", "post_text", 1, "form-control", 3, "ngModel", "ngModelChange"], ["post_text", "ngModel"], [1, "text-center"], [1, "waves-input-wrapper", "waves-effect", "waves-light"], ["type", "button", 1, "btn", "aqua-gradient", "btn-lg", 3, "click"], [1, "modal-footer"], ["type", "button", "data-dismiss", "modal", 1, "btn", "btn-secondary"], [1, "col-md-7", "mt-2", "mx-auto"], [1, "card"], [1, "table", "table-info"], [1, "category-social"], [1, "card-caption"], ["href", "#"], [1, "ftr"], [1, "author"], ["src", "https://www.iconfinder.com/data/icons/user-pictures/100/unknown-512.png", "alt", "", 1, "avatar", "img-raised"], [1, "stats"], [1, "fa", "fa-heart"]], template: function ForumComponent_Template(rf, ctx) {
             if (rf & 1) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
@@ -62688,7 +62684,7 @@ let ForumComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 8);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, ForumComponent_div_14_Template, 20, 3, "div", 9);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](14, ForumComponent_div_14_Template, 18, 3, "div", 9);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "div", 10);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 11);
@@ -63261,7 +63257,7 @@ let NavbarComponent = /*@__PURE__*/ (() => {
         }
     }
     NavbarComponent.ɵfac = function NavbarComponent_Factory(t) { return new (t || NavbarComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_user_service_user_service__WEBPACK_IMPORTED_MODULE_1__["UserService"])); };
-    NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavbarComponent, selectors: [["app-navbar"]], decls: 37, vars: 0, consts: [[1, "mb-1", "navbar", "navbar-expand-lg", "navbar-light"], ["href", "", 1, "navbar-brand"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarSupportedContent-555", "aria-controls", "navbarSupportedContent-555", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarSupportedContent-555", 1, "collapse", "navbar-collapse", 2, "width", "100"], [1, "navbar-nav", "ml-auto"], [1, "nav-item"], ["routerLink", "", "routerLinkActive", "active", 1, "nav-link"], [1, "fas", "fa-home"], ["routerLink", "/products", "routerLinkActive", "active", 1, "nav-link"], [1, "fas", "fa-hospital"], ["routerLink", "/schedules", "routerLinkActive", "active", 1, "nav-link"], [1, "fas", "fa-briefcase"], ["routerLink", "/forum", "routerLinkActive", "active", 1, "nav-link"], [1, "far", "fa-comments"], ["routerLink", "/manage-crops", "routerLinkActive", "active", 1, "nav-link"], [1, "nav-item", "avatar", "dropdown"], ["id", "navbarDropdownMenuLink-55", "data-toggle", "dropdown", "aria-haspopup", "true", "aria-expanded", "false", 1, "nav-link", "dropdown-toggle"], ["src", "https://www.iconfinder.com/data/icons/user-pictures/100/unknown-512.png", "alt", "avatar image", "width", "28px", "height", "28px", 1, "rounded-circle", "z-depth-0"], ["aria-labelledby", "navbarDropdownMenuLink-55", 1, "dropdown-menu", "dropdown-menu-lg-right", "text-center", "dropdown-secondary"], ["href", "", 1, "dropdown-item"], [1, "dropdown-item", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
+    NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavbarComponent, selectors: [["app-navbar"]], decls: 33, vars: 0, consts: [[1, "mb-1", "navbar", "navbar-expand-lg", "navbar-light"], ["href", "", 1, "navbar-brand"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarSupportedContent-555", "aria-controls", "navbarSupportedContent-555", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarSupportedContent-555", 1, "collapse", "navbar-collapse", 2, "width", "100"], [1, "navbar-nav", "ml-auto"], [1, "nav-item"], ["routerLink", "/products", "routerLinkActive", "active", 1, "nav-link"], [1, "fas", "fa-hospital"], ["routerLink", "/schedules", "routerLinkActive", "active", 1, "nav-link"], [1, "fas", "fa-briefcase"], ["routerLink", "/forum", "routerLinkActive", "active", 1, "nav-link"], [1, "far", "fa-comments"], ["routerLink", "/manage-crops", "routerLinkActive", "active", 1, "nav-link"], [1, "nav-item", "avatar", "dropdown"], ["id", "navbarDropdownMenuLink-55", "data-toggle", "dropdown", "aria-haspopup", "true", "aria-expanded", "false", 1, "nav-link", "dropdown-toggle"], ["src", "https://www.iconfinder.com/data/icons/user-pictures/100/unknown-512.png", "alt", "avatar image", "width", "28px", "height", "28px", 1, "rounded-circle", "z-depth-0"], ["aria-labelledby", "navbarDropdownMenuLink-55", 1, "dropdown-menu", "dropdown-menu-lg-right", "text-center", "dropdown-secondary"], ["href", "", 1, "dropdown-item"], [1, "dropdown-item", 3, "click"]], template: function NavbarComponent_Template(rf, ctx) {
             if (rf & 1) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "nav", 0);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 1);
@@ -63275,47 +63271,41 @@ let NavbarComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "li", 6);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "a", 7);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "i", 8);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Home ");
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "Products ");
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "li", 6);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "a", 9);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](13, "i", 10);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, "Products ");
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](14, "Schedules ");
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "li", 6);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "a", 11);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](17, "i", 12);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Schedules ");
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Forum ");
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "li", 6);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "a", 13);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "i", 14);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "Forum ");
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "i", 12);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "Manage Crops ");
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "li", 6);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "li", 14);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "a", 15);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "i", 14);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Manage Crops ");
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](25, "img", 16);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "div", 17);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "a", 18);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, "Profile");
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "li", 16);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "a", 17);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](29, "img", 18);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "a", 18);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "Edit Profile");
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "div", 19);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "a", 20);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, "Profile");
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](33, "a", 20);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](34, "Edit Profile");
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](35, "a", 21);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NavbarComponent_Template_a_click_35_listener() { return ctx.logout(); });
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, "LOGOUT");
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "a", 19);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function NavbarComponent_Template_a_click_31_listener() { return ctx.logout(); });
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, "LOGOUT");
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -63390,7 +63380,9 @@ function ProductComponent_div_12_Template(rf, ctx) {
     }
     if (rf & 2) {
         const product_r5 = ctx.$implicit;
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", product_r5.photo, _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](6);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](product_r5.name);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](product_r5.category);
@@ -63443,7 +63435,7 @@ let ProductComponent = /*@__PURE__*/ (() => {
         }
     }
     ProductComponent.ɵfac = function ProductComponent_Factory(t) { return new (t || ProductComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_product_service_product_service__WEBPACK_IMPORTED_MODULE_1__["ProductService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_services_schedule_service_schedule_service__WEBPACK_IMPORTED_MODULE_2__["ScheduleService"])); };
-    ProductComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ProductComponent, selectors: [["app-product"]], decls: 54, vars: 6, consts: [[1, "container", 2, "padding-top", "5vh"], [1, "mx-auto", "mb-3", "col-md-6", "text-center"], [1, "card", "border-info", "mx-sm-1", "p-3", 2, "position", "relative"], [1, "card", "border-info", "shadow", "text-info", "p-3", "my-card", "text-center"], [1, "fab", "fa-product-hunt"], [1, "text-info", "text-center", "mt-3"], [1, "text-info", "text-center", "mt-2"], [1, "row"], ["class", "text-center col-12 mx-auto col-sm-8 col-md-4 col-lg-3", 4, "ngFor", "ngForOf"], ["id", "recFormModal", "tabindex", "-1", "role", "dialog", "aria-labelledby", "myModalLabel", "aria-hidden", "true", 1, "modal", "fade"], ["role", "document", 1, "modal-dialog"], [1, "modal-content"], [1, "modal-header", "text-center"], [1, "modal-title", "w-100", "font-weight-bold"], ["type", "button", "data-dismiss", "modal", "aria-label", "Close", 1, "close"], ["aria-hidden", "true"], [1, "modal-body", "mx-3"], ["regForm", "ngForm"], [1, "form-group"], ["type", "text", "name", "rec_crops", "placeholder", "Enter crop(s) you recommend", "title", "", "required", "", "id", "rec_crops", 1, "form-control", 3, "ngModel", "ngModelChange"], ["rec_crops", "ngModel"], [1, "alert", "alert-danger", 3, "hidden"], [1, "form-group", "text-center"], ["type", "button", 1, "btn", "aqua-gradient-rgba", 3, "click"], ["id", "saveFormModal", "tabindex", "-1", "role", "dialog", "aria-labelledby", "myModalLabel", "aria-hidden", "true", 1, "modal", "fade"], [1, "md-form", "mb-4"], [1, "fas", "fa-apple-alt", "prefix", "grey-text", "mr-3"], ["name", "product_crop", "id", "product_crop", 1, "browser-default", "custom-select", 3, "ngModel", "ngModelChange"], ["product_crop", "ngModel"], [3, "value", 4, "ngFor", "ngForOf"], [1, "text-center", "col-12", "mx-auto", "col-sm-8", "col-md-4", "col-lg-3"], [1, "card"], ["src", "https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png", "alt", "Vans", 1, "card-img"], [1, "card-img-overlay", "d-flex", "justify-content-end"], ["data-toggle", "modal", "data-target", "#saveFormModal", "href", "#", 1, "card-link", "text-danger", "like", 3, "click"], [1, "fas", "fa-heart"], [1, "card-body"], [1, "card-title"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "card-text"], [1, "buy", "d-flex", "justify-content-between", "align-items-center"], [1, "price", "text-success"], [1, "mt-4"], ["data-toggle", "modal", "data-target", "#recFormModal", 1, "btn", "btn-success", "mt-3", 3, "click"], [3, "value"]], template: function ProductComponent_Template(rf, ctx) {
+    ProductComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ProductComponent, selectors: [["app-product"]], decls: 54, vars: 6, consts: [[1, "container", 2, "padding-top", "5vh"], [1, "mx-auto", "mb-3", "col-md-6", "text-center"], [1, "card", "border-info", "mx-sm-1", "p-3", 2, "position", "relative"], [1, "card", "border-info", "shadow", "text-info", "p-3", "my-card", "text-center"], [1, "fab", "fa-product-hunt"], [1, "text-info", "text-center", "mt-3"], [1, "text-info", "text-center", "mt-2"], [1, "row"], ["class", "text-center col-12 mx-auto col-sm-8 col-md-4 col-lg-3", 4, "ngFor", "ngForOf"], ["id", "recFormModal", "tabindex", "-1", "role", "dialog", "aria-labelledby", "myModalLabel", "aria-hidden", "true", 1, "modal", "fade"], ["role", "document", 1, "modal-dialog"], [1, "modal-content"], [1, "modal-header", "text-center"], [1, "modal-title", "w-100", "font-weight-bold"], ["type", "button", "data-dismiss", "modal", "aria-label", "Close", 1, "close"], ["aria-hidden", "true"], [1, "modal-body", "mx-3"], ["regForm", "ngForm"], [1, "form-group"], ["type", "text", "name", "rec_crops", "placeholder", "Enter crop(s) you recommend", "title", "", "required", "", "id", "rec_crops", 1, "form-control", 3, "ngModel", "ngModelChange"], ["rec_crops", "ngModel"], [1, "alert", "alert-danger", 3, "hidden"], [1, "form-group", "text-center"], ["type", "button", 1, "btn", "aqua-gradient-rgba", 3, "click"], ["id", "saveFormModal", "tabindex", "-1", "role", "dialog", "aria-labelledby", "myModalLabel", "aria-hidden", "true", 1, "modal", "fade"], [1, "md-form", "mb-4"], [1, "fas", "fa-apple-alt", "prefix", "grey-text", "mr-3"], ["name", "product_crop", "id", "product_crop", 1, "browser-default", "custom-select", 3, "ngModel", "ngModelChange"], ["product_crop", "ngModel"], [3, "value", 4, "ngFor", "ngForOf"], [1, "text-center", "col-12", "mx-auto", "col-sm-8", "col-md-4", "col-lg-3"], [1, "card"], ["alt", "Vans", 1, "img-fluid", 2, "height", "130px", 3, "src"], [1, "card-img-overlay", "d-flex", "justify-content-end"], ["data-toggle", "modal", "data-target", "#saveFormModal", "href", "#", 1, "card-link", "text-danger", "like", 3, "click"], [1, "fas", "fa-heart"], [1, "card-body"], [1, "card-title"], [1, "card-subtitle", "mb-2", "text-muted"], [1, "card-text"], [1, "buy", "d-flex", "justify-content-between", "align-items-center"], [1, "price", "text-success"], [1, "mt-4"], ["data-toggle", "modal", "data-target", "#recFormModal", 1, "btn", "btn-success", "mt-3", 3, "click"], [3, "value"]], template: function ProductComponent_Template(rf, ctx) {
             if (rf & 1) {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
@@ -63464,7 +63456,7 @@ let ProductComponent = /*@__PURE__*/ (() => {
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 7);
-                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, ProductComponent_div_12_Template, 19, 4, "div", 8);
+                _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, ProductComponent_div_12_Template, 19, 5, "div", 8);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 9);
                 _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "div", 10);
@@ -64264,7 +64256,7 @@ let UserService = /*@__PURE__*/ (() => {
             this.http.post(`${_environments_environment__WEBPACK_IMPORTED_MODULE_2__["environment"].api_url}/api/token/`, JSON.stringify(user), this.httpOptions).subscribe(data => {
                 this.updateData(data['access']);
                 this.refresh = data['refresh'];
-                this.router.navigate(['/forum']);
+                this.router.navigate(['/products']);
             }, err => {
                 this.errors = [err.error.detail];
             });
