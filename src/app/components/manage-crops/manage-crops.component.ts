@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {CropService} from '../../services/crop-service/crop.service';
 @Component({
   selector: 'app-manage-crops',
   templateUrl: './manage-crops.component.html',
@@ -9,7 +9,7 @@ export class ManageCropsComponent implements OnInit {
 
 
 	public crop:any
-  constructor() { }
+  constructor(public _cropService: CropService) { }
 
   ngOnInit() {
   	this.crop={
@@ -23,7 +23,7 @@ export class ManageCropsComponent implements OnInit {
 
 
   addCrop(){
-  	console.log(this.crop)
+  	this._cropService.addCrop(this.crop)
   }
 
 }
