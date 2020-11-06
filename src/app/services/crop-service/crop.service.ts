@@ -27,7 +27,7 @@ export class CropService {
     this.http.post(`${environment.api_url}/shamba/api/crop`, crop, this.httpOptions).subscribe(
       data => {
         this._scheduleService.userCrops()
-       	alert('Crop successfully')
+       	alert('Crop added successfully')
       },
       err => {
       	this.errors=true

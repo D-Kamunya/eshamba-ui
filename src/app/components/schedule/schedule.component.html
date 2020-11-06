@@ -40,7 +40,7 @@
         <div class="md-form mb-4">
       <i class="fas fa-apple-alt prefix grey-text mr-3"></i>
           <select [(ngModel)]="schedule.crop" #schedule_crop='ngModel' name="schedule_crop" id="schedule_crop" class="browser-default custom-select">
-			  <option *ngFor="let crop of _scheduleService.usercrops,let i=index" value="{{crop.id}}">{{crop.name}}</option>
+			  <option *ngFor="let crop of _scheduleService.usercrops;let i=index" value="{{crop.id}}">{{crop.name}}</option>
 			</select>
  
         </div>

@@ -3,21 +3,21 @@
       <div style="position: relative;" class="card border-info mx-sm-1 p-3">
           <div class="card border-info shadow text-info p-3 my-card text-center" ><i class="fas fa-blog"></i></div>
           <div class="text-info text-center mt-3"><h4>Manage Crops</h4></div>
-          <div class="text-info text-center mt-2"><h1>5</h1></div>
+          <div class="text-info text-center mt-2"><h1>{{ _scheduleService.usercrops.length}}</h1></div>
           <button style="width: 50%;" data-toggle="modal" data-target="#addFormModal" class="mx-auto btn btn-md aqua-gradient">Add Crop</button>
       </div>
     </div>
    
  <div class="row">
-    <div  class="text-center col-12 mx-auto col-sm-8 col-md-4 col-lg-3">
+    <div *ngFor="let crop of _scheduleService.usercrops;let i=index"  class="text-center col-12 mx-auto col-sm-8 col-md-4 col-lg-3">
       <div class="card">
-        <img class="card-img" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/vans.png" alt="Vans">
+        <img class="card-img" src="https://cdn.pixabay.com/photo/2015/07/30/11/05/pineapple-867245_960_720.jpg" alt="Crop">
         <div class="card-img-overlay d-flex justify-content-end">
          
         </div>
         <div class="card-body">
-           <h4 class="card-title">Crop name</h4>
-          <h6 class="card-subtitle mb-2 text-muted">Crop details</h6>
+           <h4 class="card-title">Crop name : {{crop.name}}</h4>
+          <h6 class="card-subtitle mb-2 text-muted">Crop details : {{crop.details}}</h6>
          
 
         </div>
